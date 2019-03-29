@@ -1,0 +1,218 @@
+
+
+/* ============================
+        Element Styles
+=============================*/
+* {
+    box-sizing: border-box;
+    margin: 0; 
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+
+html, body { 
+	height: 100%; 
+} 
+
+
+html {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif, monospace;
+    background-color: lightgray;
+    line-height: 1.5;
+}
+
+body {
+    line-height: 1.5;
+    margin: 0 auto;
+}
+
+header {
+    color:  white;
+    background-color: orange;
+}
+
+li {
+    text-decoration: none;
+    color: orange;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+
+/* ============================
+        Layout Class Styles
+=============================*/
+ 
+ .page-wrap { 
+    min-height: 100%;
+    width: 100%;
+	/* equal to footer height */ 
+	margin-bottom: -142px; 
+} 
+
+.page-wrap:after { 
+	content: ""; display: block; 
+} 
+
+
+/* ============================
+        ID Styles
+=============================*/
+
+#primary {
+    padding: 2em;
+    margin:2em;
+}
+
+#secondary {
+    padding: 2em;
+    margin:2em;
+}
+
+/*---------- Header ---------- */
+
+.main-header {
+    padding: 1.5em;
+    width: 100%;
+    margin: 1px;
+  }
+
+.name {
+    font-size: 34px;
+    font-family: Arial, Helvetica, sans-serif, monospace;
+    text-align: left; 
+}
+
+/*---------- Nav ---------- */
+
+.main-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.main-nav li {
+    text-transform: uppercase;
+    background: gray;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 1em;
+}
+
+.main-nav a {
+    font-size: 150%;
+    text-transform: uppercase;
+}
+
+.main-nav a:hover {
+    color: white;
+}
+
+nav ul {
+    margin: 0;
+    padding:0;
+    list-style-type: none;
+}
+
+nav a {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 0;
+    text-decoration: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/*---------- Body ---------- */
+
+.wrapping {
+    width: 100%;
+    margin 0 auto;
+}
+
+#map-button {
+    width: 300px;
+    padding: 10px;
+    margin: 0 auto;
+    box-align: center;
+}
+
+/*---------- Footer ---------- */
+
+.main-footer {
+    padding: 1em;
+    background-color: orange;
+    font-size: 8px;
+}
+
+.main-footer, .page-wrap:after { 
+	height: 142px; 
+} 
+
+.main-footer { 
+	background: orange; 
+}
+
+
+/* ==============================
+        Media Queries
+============================== */
+
+@media (min-width:376px) {
+
+    .main-header {
+        width: 100%
+    }
+
+    .nav a {
+        float: none;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+
+    .page-wrap {
+        min-height: calc(100vh - 104px);
+    }
+}
+
+@media (min-width:769px) {
+
+    .main-header,
+    .main-nav ul {
+        display:flex;
+    }
+
+    .main-header {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #map-button {
+        width: 50%;
+        text-weight: bold;
+        margin: 0 auto;
+        box-align: center;
+    }
+}
+
+@media (min-width: 1025px) {
+
+    .main-header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+
+
